@@ -49,7 +49,7 @@ interface Props {
     excludedCountries?: string[],
     showOnly?: string[],
     popularCountries?: string[],
-
+    statusBarTranslucent?: boolean,
     style?: Style,
 
     show: boolean,
@@ -73,6 +73,7 @@ interface Props {
 export const CountryPicker = ({
     show,
     popularCountries,
+    statusBarTranslucent = true,
     pickerButtonOnPress,
     inputPlaceholder,
     inputPlaceholderTextColor,
@@ -223,6 +224,7 @@ export const CountryPicker = ({
             transparent={true}
             visible={showModal}
             onShow={openModal}
+            statusBarTranslucent={statusBarTranslucent}
             onRequestClose={onRequestClose}
         >
             <View
